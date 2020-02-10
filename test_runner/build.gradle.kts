@@ -175,7 +175,8 @@ dependencies {
     implementation("com.google.auth:google-auth-library-oauth2-http:0.18.0")
 
     // https://github.com/jhy/jsoup/releases
-    testImplementation("org.jsoup:jsoup:1.12.1")
+    implementation("org.jsoup:jsoup:1.12.1")
+
     testImplementation(Libs.JUNIT)
     // https://github.com/google/truth/releases
     testImplementation("com.google.truth:truth:1.0")
@@ -194,7 +195,7 @@ dependencies {
     // https://github.com/mockito/mockito/releases
     testImplementation("org.mockito:mockito-inline:3.1.0")
     // https://github.com/square/okhttp/releases
-    testImplementation("com.squareup.okhttp3:okhttp:4.2.2")
+    implementation("com.squareup.okhttp3:okhttp:4.2.2")
 
     // todo: move to testImplementation once DI is implemented https://github.com/TestArmada/flank/issues/248
     // https://search.maven.org/search?q=a:google-cloud-nio%20g:com.google.cloud

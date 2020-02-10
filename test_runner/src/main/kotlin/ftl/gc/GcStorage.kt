@@ -133,7 +133,7 @@ object GcStorage {
             output.close()
         } catch (e: Exception) {
             if (ignoreError) return ""
-            fatalError(e)
+            fatalError(e, "Cannot download $gcsUriString")
         }
 
         return outputFile.path

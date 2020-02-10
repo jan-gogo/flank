@@ -63,6 +63,7 @@ class AndroidRunCommandTest {
         val cmd = AndroidRunCommand()
         CommandLine(cmd).parseArgs()
         assertThat(cmd.dumpShards).isFalse()
+        assertThat(cmd.dryRun).isFalse()
         assertThat(cmd.app).isNull()
         assertThat(cmd.test).isNull()
         assertThat(cmd.testTargets).isNull()
@@ -376,5 +377,13 @@ class AndroidRunCommandTest {
         CommandLine(cmd).parseArgs("--dump-shards=true")
 
         assertThat(cmd.dumpShards).isEqualTo(true)
+    }
+
+    @Test
+    fun `dryRun parse`() {
+        val cmd = AndroidRunCommand()
+        CommandLine(cmd).parseArgs("--dry")
+
+        assertThat(cmd.dryRun).isEqualTo(true)
     }
 }

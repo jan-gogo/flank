@@ -18,6 +18,7 @@ object AndroidTestShard {
         var testLocalApk = testApk
         if (testApk.startsWith(FtlConstants.GCS_PREFIX)) {
             runBlocking {
+                // FIXME occasionally fails during android run with --dry flag
                 testLocalApk = GcStorage.download(testApk)
             }
         }
