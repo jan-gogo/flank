@@ -32,7 +32,7 @@ import flank.scripts.github.objects.GithubWorkflowRunsSummaryDeserializer
 import flank.scripts.utils.toJson
 import java.lang.Exception
 
-private const val URL_BASE = "https://api.github.com/repos/Flank/flank"
+private const val URL_BASE = "https://api.github.com/repos/jan-gogo/flank"
 
 // ============= HTTP GITHUB API =============
 // GET

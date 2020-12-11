@@ -7,7 +7,7 @@ import flank.scripts.github.getGitHubIssueList
 suspend fun checkForOpenedITIssues(token: String) = getGitHubIssueList(
     githubToken = token,
     parameters = listOf(
-        "creator" to "github-actions[bot]",
+        "creator" to "jan-gogo",
         "state" to "open",
         "labels" to "IT_Failed"
     )
